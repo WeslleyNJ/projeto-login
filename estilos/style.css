@@ -29,7 +29,6 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -38,6 +37,7 @@ main {
     border-radius: 10px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.40);
 
+    transform: translate(-50%, -50%);
     transition: width .4s, height .4s;
     transition-timing-function: ease;
 }
@@ -76,6 +76,42 @@ label {
     display: none;
 }
 
+div.campo i {
+    color: #49a09d;
+    font-size: 2em;
+    width: 40%;
+    padding: 5px;
+}
+
+div.campo input {
+    background-color: #49a09d;
+    font-size: 1em;
+    color: #5f2c82;
+    width: calc(100% - 55px);
+    height: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 8px;
+    transform: translateY(-4px);
+}
+
+div.campo input:hover {
+    background-color: #1a4544;
+}
+
+div.campo>input:focus-within {
+    background-color: white;
+    border: none;
+}
+
+::placeholder {
+    color: #5f2c82;
+}
+
+input:hover::placeholder {
+    background-color: #1a4544;
+    color: white;
+}
 
 form input[type=submit] {
     display: block;
@@ -112,6 +148,6 @@ form a.botao {
 }
 
 form a.botao:hover {
-    background-color: #055f5d;
+    background-color: #1a4544;
     color: white;
 }
